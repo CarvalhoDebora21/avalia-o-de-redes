@@ -1,0 +1,252 @@
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e Notícias - Biblioteca Vozes de Mulher</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #2c2c2c;
+            background-color: #faf6f0; /* Fundo creme padrão */
+        }
+
+        a {
+            text-decoration: none;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        /* MENU DE NAVEGAÇÃO SUPERIOR (EXATAMENTE IGUAL AO ACERVO) */
+        nav {
+            background-color: #704264; /* Púrpura padrão */
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-logo {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        .nav-logo span {
+            font-weight: 300;
+            margin-left: 5px;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        h2 {
+            color: #704264;
+            font-size: 2em;
+            margin: 40px 0 10px 0;
+            border-bottom: 2px solid #dfcbd9;
+            padding-bottom: 8px;
+        }
+
+        h4 {
+            color: #704264;
+            font-size: 1.8em;
+            margin: 60px 0 10px 0;
+            border-bottom: 2px solid #dfcbd9;
+            padding-bottom: 8px;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* CARDS DE EVENTOS E NOTÍCIAS */
+        .evento-card, .card-item {
+            background: white;
+            border: 1px solid #e1d7cf;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .evento-card, .card-item {
+                flex-direction: row; /* Coloca data e conteúdo lado a lado */
+                align-items: flex-start;
+            }
+        }
+
+        /* BLOCO DE DATA DESTAQUE */
+        .evento-data, .bloco-data {
+            background-color: #704264;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 4px;
+            min-width: 80px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+        
+        .bloco-data {
+            background-color: #a37096; 
+        }
+
+        .data-dia {
+            font-size: 1.8em;
+            font-weight: bold;
+            display: block;
+            line-height: 1;
+        }
+        .data-mes {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* CONTEÚDOS INTERNOS */
+        .evento-conteudo, .card-conteudo {
+            flex: 1;
+        }
+        .evento-titulo, .card-titulo {
+            font-size: 1.3em;
+            color: #704264;
+            margin: 0 0 5px 0;
+        }
+        .evento-detalhes, .card-detalhes {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0 0 12px 0;
+        }
+        .evento-detalhes span, .card-detalhes span {
+            margin-right: 15px;
+            display: inline-block;
+        }
+        .evento-descricao, .card-descricao {
+            margin: 0 0 15px 0;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        /* BOTÕES DE AÇÃO */
+        .btn-inscricao, .btn-acao {
+            display: inline-block;
+            background-color: #704264;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .btn-inscricao:hover {
+            background-color: #4a2842;
+        }
+
+        .btn-noticia {
+            background-color: #f0e6df;
+            color: #704264;
+            border: 1px solid #704264;
+        }
+        .btn-noticia:hover {
+            background-color: #e6d3c5;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background-color: #333;
+            color: #b3a7a0;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 80px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">Biblioteca<span>Vozes de Mulher</span></a>
+        <ul class="nav-links">
+		    <li><a href="projeto4.html">Início</a></li> 
+            <li><a href="sobrenosprojeto04.html">Sobre nós</a></li>
+            <li><a href="páginaacervo.html">Acervo</a></li>
+            <li><a href="páginaeventos.html">Eventos</a></li>
+            <li><a href="páginaserviços.html">Serviços</a></li>
+            <li><a href="páginacontato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Próximos Eventos</h2>
+        <p class="intro">Participe das nossas rodas de conversa, clubes de leitura e oficinas. Todos os nossos eventos são gratuitos e focados no protagonismo feminino.</p>
+
+        <div class="evento-card">
+            <div class="evento-data">
+                <span class="data-dia">18</span>
+                <span class="data-mes">Jul</span>
+            </div>
+            <div class="evento-conteudo">
+                <h3 class="evento-titulo">Clube de Leitura: Quarto de Despejo</h3>
+                <div class="evento-detalhes">
+                    <span><strong>Horário:</strong> 15:00 - 17:00</span>
+                    <span><strong>Local:</strong> Sala de Convivência</span>
+                </div>
+                <p class="evento-descricao">Vamos nos reunir para debater a obra de Carolina Maria de Jesus. Traga suas impressões, passagens favoritas e venha compartilhar essa experiência com outras leitoras.</p>
+                <a href="#" class="btn-inscricao">Garantir Vaga</a>
+            </div>
+        </div>
+
+        <h4>Notícias e Atualizações</h4>
+        <p class="intro">Acompanhe as principais novidades e conquistas sobre os direitos e o acolhimento das mulheres no Brasil.</p>
+
+        <div class="card-item">
+            <div class="bloco-data">
+                <span class="data-dia">07</span>
+                <span class="data-mes">Jul</span>
+            </div>
+            <div class="card-conteudo">
+                <h3 class="card-titulo">Câmara aprova criação do Sistema Nacional de Enfrentamento à Violência contra a Mulher</h3>
+                <div class="card-detalhes">
+                    <span><strong>Fonte:</strong> CNN Brasil</span>
+                    <span><strong>Categoria:</strong> Políticas Públicas</span>
+                </div>
+                <p class="card-descricao">A Câmara dos Deputados aprovou o projeto que prevê a destinação de verbas para ações de combate ao feminicídio e estruturação de atendimento às vítimas.</p>
+                <a href="#" class="btn-acao btn-noticia">Led notícia completa ↗</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Vozes de Mulher. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
